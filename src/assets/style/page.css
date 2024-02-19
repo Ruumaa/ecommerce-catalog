@@ -1,0 +1,452 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS class untuk main-page */
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* CSS class untuk bg */
+.bg {
+    position: absolute;
+    inset: 0;
+    height: 66.666667%;
+    /* 4/6 dari tinggi layar */
+}
+
+.bg-women-main {
+    background-color: #FDE2FF;
+}
+
+.bg-men-main {
+    background-color: #D6E6FF;
+}
+
+.bg-unavailable-main {
+    background-color: #D8D7D7;
+}
+
+/* CSS class untuk card */
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    height: 24rem;
+    /* 96px * 0.25rem = 24rem */
+    width: 66.666667%;
+    /* 4/6 dari lebar layar */
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 0.375rem;
+    /* Sesuaikan dengan nilai yang Anda inginkan */
+    background-color: #FFFFFF;
+    /* Sesuaikan dengan warna yang Anda inginkan */
+    padding: 2rem;
+    /* 8px * 0.25rem = 2rem */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* Sesuaikan dengan bayangan yang Anda inginkan */
+}
+
+.image-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    /* Equivalent to 'my-auto' */
+    height: 83.33%;
+    /* Equivalent to 'h-5/6' */
+    width: 33.33%;
+    /* Equivalent to 'w-2/6' */
+    border-radius: 0.5rem;
+    /* Equivalent to 'rounded-lg' */
+    padding: 0.25rem;
+    /* Equivalent to 'p-1' */
+}
+
+.image-content {
+    height: 100%;
+    /* Equivalent to 'h-full' */
+    width: 83.33%;
+    /* Equivalent to 'w-5/6' */
+    object-fit: contain;
+    object-position: center;
+}
+
+
+.text-container {
+    margin-left: 0.25rem;
+    /* Equivalent to 'ml-1' */
+    display: flex;
+    /* Ensures children elements are arranged in a row */
+    height: 100%;
+    /* Equivalent to 'h-full' */
+    width: 66.67%;
+    /* Equivalent to 'w-4/6' */
+    flex-direction: column;
+    /* Children elements are stacked vertically */
+    align-items: flex-start;
+    /* Children elements are aligned to the start of the cross axis */
+}
+
+.title {
+    font-size: 1.25rem;
+    /* Equivalent to 'text-xl' */
+    font-weight: bold;
+    /* Equivalent to 'font-bold' */
+}
+
+.title-women {
+    color: #720060;
+    /* Equivalent to 'text-[#720060]' */
+}
+
+.title-men {
+    color: #002772;
+    /* Equivalent to 'text-[#720060]' */
+}
+
+.category-rating-container {
+    margin-top: 0.75rem;
+    /* mt-3 */
+    display: flex;
+    /* flex */
+    width: 100%;
+    /* w-full */
+    justify-content: space-between;
+    /* justify-between */
+    padding-right: 0.5rem;
+    /* pr-2 */
+    font-size: 0.75rem;
+    /* text-xs */
+    font-weight: 500;
+}
+
+.category-title {
+    margin: 0;
+    /* Reset margin */
+}
+
+.rating {
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    gap: 0.25rem;
+    /* gap-1 */
+}
+
+.rating-icon {
+    height: 0.75rem;
+    /* h-3 */
+    width: 0.75rem;
+    /* w-3 */
+    display: flex;
+    /* flex */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center */
+    border-radius: 50%;
+    /* rounded-full */
+}
+
+.rating-border-women {
+    border: 1px solid #720060;
+    /* border */
+}
+
+.rating-border-men {
+    border: 1px solid #002772;
+    /* border */
+}
+
+
+.rating-icon-filled-women {
+    background-color: #720060;
+    /* bg-[#720060] */
+}
+
+.rating-icon-filled-men {
+    background-color: #002772;
+    /* bg-[#720060] */
+}
+
+.rating-icon-empty {
+    background-color: #ffffff;
+    /* bg-white */
+}
+
+.divider {
+    border: 1px solid #00000033;
+    background-color: #00000033;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.description {
+    margin-top: 0.75rem;
+    /* Tailwind: mt-3 */
+    min-height: 11rem;
+    /* Tailwind: min-h-36 */
+    width: 100%;
+    /* Warna border */
+    padding-right: 0.625rem;
+    /* Tailwind: pr-2.5 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+}
+
+/* Price */
+.price {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* Tailwind: mt-1 */
+    font-size: 1.125rem;
+    /* Tailwind: text-lg */
+    font-weight: bold;
+    /* Tailwind: font-bold */
+}
+
+.price-women {
+    color: #720060;
+    /* Tailwind: text-[#720060] */
+}
+
+.price-men {
+    color: #002772
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 0.5rem;
+    /* Tailwind: mt-2 */
+    width: 100%;
+    /* Tailwind: w-full */
+    display: flex;
+    /* Tailwind: flex */
+    align-items: center;
+    /* Tailwind: items-center */
+    justify-content: space-between;
+    /* Tailwind: justify-between */
+    gap: 0.5rem;
+    /* Tailwind: gap-2 */
+    padding-right: 0.75rem;
+    /* Tailwind: pr-3 */
+}
+
+/* Button */
+.buy-button,
+.next-button {
+    min-height: 2.25rem;
+    /* Tailwind: min-h-9 */
+    width: 50%;
+    /* Tailwind: w-1/2 */
+    border-radius: 0.375rem;
+    /* Tailwind: rounded */
+    font-weight: 500;
+    /* Tailwind: font-medium */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* Tailwind: transition */
+    cursor: pointer;
+}
+
+.border-button-women {
+    border: 2px solid #720060;
+    /* Tailwind: border-2 */
+}
+
+.border-button-men {
+    border: 2px solid #002772;
+    /* Tailwind: border-2 */
+}
+
+/* Button 1 */
+.buy-button {
+    color: white;
+    /* Tailwind: text-white */
+}
+
+.bg-women {
+    background-color: #720060;
+    /* Tailwind: bg-[#720060] */
+}
+
+.bg-men {
+    background-color: #002772;
+}
+
+/* Button 2 */
+.next-button {
+    background-color: white;
+    /* Tailwind: bg-white */
+}
+
+.text-women {
+    color: #720060;
+    /* Tailwind: text-[#720060] */
+}
+
+.text-men {
+    color: #002772;
+}
+
+/* Hover State */
+.women-page .buy-button:hover,
+.women-page .next-button:hover {
+    background-color: #720055;
+    /* Tailwind: hover:bg-[#720055] */
+    color: white;
+    /* Tailwind: hover:text-white */
+}
+
+.men-page .buy-button:hover,
+.men-page .next-button:hover {
+    background-color: #002768;
+    color: white;
+    /* Tailwind: hover:text-white */
+}
+
+/* Unavailable Page*/
+.unavailable-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.unavailable-button {
+    /* mt-3 */
+    height: 2rem;
+    /* h-8 */
+    width: 20rem;
+    /* w-20 */
+    cursor: pointer;
+    border-radius: 0.125rem;
+    /* rounded-sm */
+    border-width: 0.125rem;
+    /* border-2 */
+    border-color: #000;
+    /* border-black */
+    background-color: #fff;
+    /* bg-white */
+    font-weight: 600;
+    /* font-semibold */
+    color: #3F3F3F;
+    /* text-[#3F3F3F] */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.unavailable-button:hover {
+    background-color: #000;
+    /* hover:bg-black */
+    color: #fff;
+    /* hover:text-white */
+}
+
+.wrapper {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4e84e0;
+    left: 15%;
+    transform-origin: 50%;
+    animation: circle .5s alternate infinite ease;
+}
+
+@keyframes circle {
+    0% {
+        top: 60px;
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+    }
+
+    40% {
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+.circle:nth-child(2) {
+    left: 45%;
+    animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}
+
+.shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow .5s alternate infinite ease;
+}
+
+@keyframes shadow {
+    0% {
+        transform: scaleX(1.5);
+    }
+
+    40% {
+        transform: scaleX(1);
+        opacity: .7;
+    }
+
+    100% {
+        transform: scaleX(.2);
+        opacity: .4;
+    }
+}
+
+.shadow:nth-child(4) {
+    left: 45%;
+    animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}
