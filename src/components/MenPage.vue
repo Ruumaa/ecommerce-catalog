@@ -3,7 +3,8 @@ export default {
     props:{
         productData: Object,
         changeIndex: Function,
-        loading: Boolean
+        loading: Boolean,
+        refreshPage: Function
     },
 }
 </script>
@@ -18,7 +19,7 @@ export default {
         <div class="shadow"></div>
         <span>Loading</span>
     </div>
-     <main class="bg bg-men-main" v-else></main>
+     <main class="bg bg-men-main" v-else><img src="../assets/static/bg-pattern.svg" alt="pattern" class="pattern"></main>
     <div class="card" >
       <div class="image-container">
         <img class="image-content" :src="productData.image"/>
@@ -45,7 +46,7 @@ export default {
         <div class="divider"></div>
         <div class="price price-men">${{ productData.price}}</div>
         <div class="button-container men-page">
-            <button class="buy-button bg-men border-button-men">Buy Now</button>
+            <button @click="refreshPage()" class="buy-button bg-men border-button-men">Buy Now</button>
             <button @click="changeIndex(productData.id)" class="next-button text-men border-button-men" >Next Product</button>
         </div>
       </div>

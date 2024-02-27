@@ -11,6 +11,7 @@ export default {
      <main class="bg bg-unavailable-main"></main>
     <div class="card">
         <div class="unavailable-container">
+            <img src="../assets/static/sad-face.png" alt="sad-face">
             <div class="inner-container">
                 <h5 class="unavailable-title">This product is unavailable to show</h5>
                 <button @click="changeIndex(index)" class="unavailable-button">Next product</button>

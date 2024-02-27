@@ -30,6 +30,9 @@ export default {
         } finally{
           this.loading = false
         }
+      },
+      refreshPage(){
+        location.reload()
       }
     },
     mounted(){
@@ -48,10 +51,10 @@ export default {
         <div class="shadow"></div>
     </div>
     <div v-else-if="products.category === `men's clothing`" class="main-container">
-    <MenPage :productData="products"  v-if="products !== null && !loading" :changeIndex="changeIndex" :loading="this.loading"/>
+    <MenPage :productData="products"  v-if="products !== null && !loading" :changeIndex="changeIndex" :loading="this.loading" :refreshPage="refreshPage"/>
    </div>
    <div v-else-if="products.category === `women's clothing`" class="main-container">
-   <WomenPage :productData="products"  v-if="products !== null && !loading" :changeIndex="changeIndex" :loading="this.loading"/>
+   <WomenPage :productData="products"  v-if="products !== null && !loading" :changeIndex="changeIndex" :loading="this.loading" :refreshPage="refreshPage"/>
    </div>
    <div v-else class="main-container">
    <UnavailablePage :index="index" :changeIndex="changeIndex"/>

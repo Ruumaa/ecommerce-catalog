@@ -20,6 +20,22 @@ body {
     /* 4/6 dari tinggi layar */
 }
 
+/* pattern */
+.pattern {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.sad-face {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .bg-women-main {
     background-color: #FDE2FF;
 }
@@ -28,9 +44,11 @@ body {
     background-color: #D6E6FF;
 }
 
+
 .bg-unavailable-main {
     background-color: #D8D7D7;
 }
+
 
 /* CSS class untuk card */
 .card {
@@ -315,27 +333,48 @@ body {
 /* Unavailable Page*/
 .unavailable-container {
     display: flex;
+    position: relative;
     height: 100%;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
+.unavailable-container img {
+    display: block;
+    /* position: absolute; */
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    /* background-color: #4e84e0; */
+}
+
+
 .inner-container {
     display: flex;
+    position: absolute;
     flex-direction: column;
     height: 100%;
     width: 100%;
     align-items: center;
     justify-content: center;
+    z-index: 20;
+    margin-bottom: 8%;
 }
 
+.unavailable-title {
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
 
 .unavailable-button {
-    /* mt-3 */
+    margin-bottom: 2rem;
     height: 2rem;
     /* h-8 */
-    width: 20rem;
+    width: 26rem;
     /* w-20 */
     cursor: pointer;
     border-radius: 0.125rem;
